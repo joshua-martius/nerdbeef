@@ -108,7 +108,7 @@
 			
 			$('#addcategory').click(function() {
 				var kategorienanzahl = ($('#categorieswrapper .textinput').length);
-				$('#categorieswrapper tr:last').before('<tr><td><input type="text" name="category'+kategorienanzahl+'" value="Kategorie'+kategorienanzahl+'" class="textinput" style="width:350px" /></td></tr>');
+				$('#categorieswrapper tr:last').before('<tr><td><input type="text" name="category'+kategorienanzahl+'" value="Kategorie'+kategorienanzahl+'" class="textinput" style="width:50px" /></td></tr>');
 		//		$( "#categories" ).trigger("submit");
 			});
 			
@@ -181,6 +181,21 @@
 				$('.pointsrow').click(function(){
 					var id = $(this).attr("id");
 					var temp = read_question(id);
+				});
+
+				$('#migrate').click(function(){
+					if (window.confirm("Are you sure?")) {
+						let points = document.querySelectorAll("input[id^='points']");
+						let names = document.querySelectorAll("input[name^='player']");
+						let params = "";
+						for(let i=0;i<points.length;i++)
+						{
+							params = params + names[i].value + "=" + points[i].value + "&"; 
+						}
+						params = params.substring(0,params.length - 1);
+						location.href = dbscriptlink + params;
+					}
+					
 				});
 				
 				$('.mult').click(function(){
