@@ -183,3 +183,7 @@
 		background-color: rgba(0, 0, 200, 0.4);
 		color: rgba(0, 0, 111, 1);
 	}
+	#migrate {
+		background-color: rgba(223, 226, 10, 0.4);
+		color: rgba(0, 0, 111, 1);
+	}
