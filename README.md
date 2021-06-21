@@ -5,3 +5,5 @@ Installation:
 > npm install
 
 > node nerbeef2.js
+
+> var dbscriptlink = ""; // link to db export script on webserver in ip.js
