@@ -1,5 +1,5 @@
-var version = "v2.34"
-var datum = "22.01.2017";
+var version = "v2.34-Yoshi"
+var datum = "21.06.2021";
 var players = [];
 var scores = [];
 var buzzered_players = [];
