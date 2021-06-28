@@ -193,7 +193,8 @@
 							params = params + names[i].value + "=" + points[i].value + "&"; 
 						}
 						params = params.substring(0,params.length - 1);
-						location.href = dbscriptlink + params;
+						window.open(dbscriptlink + params, "_blank");
+						//location.href = dbscriptlink + params;
 					}
 					
 				});
